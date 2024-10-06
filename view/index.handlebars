@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        
+
+// app.post('/api/invest', async (req, res) => {
+//   const token = req.headers['x-access-token']
+//   try {
+//     const decode = jwt.verify(token, 'secret1258')
+//     const email = decode.email
+//     const user = await User.findOne({ email: email })
+
+//     const money = (() => {
+//       switch (req.body.percent) {
+//         case '4%':
+//           return (req.body.amount * 4) / 100
+//         case '8%':
+//           return (req.body.amount * 8) / 100
+//         case '14%':
+//           return (req.body.amount * 14) / 100
+//         case '18%':
+//           return (req.body.amount * 18) / 100
+//         case '24%':
+//           return (req.body.amount * 24) / 100
+//         case '30%':
+//           return (req.body.amount * 30) / 100
+//       }
+//     })()
+//     if (user.capital >= req.body.amount) {
+//       const now = new Date()
+//       await User.updateOne(
+//         { email: email },
+//         {
+//           $push: {investment: 
+//             {
+//             type:'investment',
+//             amount : req.body.amount, 
+//             plan: req.body.plan, 
+//             percent:req.body.percent, 
+//             startDate: now.toLocaleString(),
+//             endDate: now.setDate(now.getDate() + 432000).toLocaleString(),
+//             profit: money, 
+//             ended:now.getTime() + 432000,
+//             started:now.getTime(),
+//             periodicProfit:0
+//           },
+//           transaction:{
+//             type:'investment',
+//             amount: req.body.amount,
+//             date: now.toLocaleString(),
+//             balance: user.funded,
+//             id:crypto.randomBytes(32).toString("hex")
+//           }
+//         }
+//       }
+//       )
+//       await User.updateOne(
+//         { email: email },
+//         {
+//           $set: {capital : user.capital - req.body.amount, totalprofit : user.totalprofit + money ,withdrawDuration: now.getTime()}
+//         }
+//       )
+//       res.json({ status: 'ok', amount: req.body.amount, name: user.firstname, email: user.email, periodicProfit: user.periodicProfit })
+//     } else {
+//       res.json({
+//         message: 'You do not have sufficient amount in your account',
+//         status:400
+//       })
+//     }
+//   } catch (error) {
+//     return res.json({ status: 500 , error: error})
+//   }
+// })
+
+
+// const change = (users, now) => {
+//   users.forEach((user) => {
+//        user.investment.map(async(invest) =>{
+//         if (isNaN(invest.started)){
+//           return
+//         }
+//         if(user.investment === []){
+//           return
+//         }
+//         if(now + 432000000 - invest.started >= 432000000){
+//           return
+//         }
+//         if(isNaN(invest.profit)){
+//           return
+//         }
+//         else{
+//           await User.updateOne(
+//             { email: user.email },
+//             {
+//               $set:{
+//                 funded:user.funded + Math.round(18/100 * invest.profit),
+//                 periodicProfit:user.periodicProfit + Math.round(18/100 * invest.profit),
+//                 capital:user.capital + Math.round(18/100 * invest.profit),
+//               }
+//             }
+//           ) 
+//         }
+//  })
+// })
+// }
+
+// setInterval(async () => {
+//   const users = (await User.find()) ?? []
+//   const now = new Date().getTime()
+//   change(users, now)
+// }, 900000)
+</script>
+</body>
+</html>

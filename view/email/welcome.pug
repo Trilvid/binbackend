@@ -1,0 +1,79 @@
+//- extends baseEmail.pug
+
+//- block content
+
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title= subject
+
+    include _style
+  body
+    table.body(role='presentation', border='0', cellpadding='0', cellspacing='0')
+      tbody
+        tr
+          td
+          td.container
+            .content
+              // START CENTERED WHITE CONTAINER
+              table.main(role='presentation')
+
+                // START MAIN AREA
+                tbody
+                  tr
+                    td.wrapper
+                      table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                        tbody
+                          tr
+                            td
+
+  h1 Dear #{firstName},
+
+  p Welcome to OceanVolte Investment Company! We are thrilled to have you join our community of ambitious investors and financial enthusiasts. Get ready to embark on a journey that will empower you to achieve your financial goals and unlock new opportunities.
+
+  p At OceanVolte, we believe in delivering exceptional services and personalized experiences tailored to your unique needs. As a valued member, you will gain access to a wide range of investment opportunities, expert insights, and dedicated support to navigate the ever-changing landscape of the financial markets.
+
+  p Here's what you can expect as a member of OceanVolte:
+
+ul 
+
+  li Comprehensive Investment Solutions: Whether you're interested in stocks, bonds, real estate, cryptocurrencies, or more, our diverse portfolio of investment options offers something for every investor.
+
+  li Expert Guidance: Our seasoned team of professionals is here to provide expert guidance and support every step of the way. We'll help you understand market trends, explore potential opportunities, and make informed investment decisions.
+
+  li Cutting-Edge Technology: Stay at the forefront of the industry with our advanced trading platforms and tools. Access real-time market data, monitor your portfolio, and execute trades with ease, all at your fingertips.
+
+  li Educational Resources: We believe in empowering our members with knowledge. Take advantage of our educational resources, market insights, and regular updates to enhance your understanding of the financial world.
+
+  li Personalized Support: Your success is our priority. Our dedicated support team is available to address any questions, concerns, or assistance you may need. We are committed to providing timely and responsive support tailored to your individual needs.
+
+  li We are excited to have you on board and look forward to being a part of your financial journey. Together, we will navigate the markets, seize opportunities, and achieve remarkable results.
+
+  li To get started, please log in to your account at [website/login page] using your credentials. Should you need any assistance, our support team is here to help.
+
+p Once again, welcome to OceanVolte Investment Company! We are honored to have you as a member and are excited to witness your financial growth and success.
+
+h2 Best regards,
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Login
+  
+  p - Joyce Williston, Sales Team
+
+              .footer
+                table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                  tbody
+                    tr
+                      td.content-block
+                        span.apple-link OceanVolte 2023
+                        br
+                        |  Don't like these emails? 
+                        a(href='#') Unsubscribe
